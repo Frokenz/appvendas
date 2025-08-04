@@ -28,8 +28,8 @@ public class main extends javax.swing.JFrame {
 
         painelTabela = new javax.swing.JTabbedPane();
         tabelaVendas = new javax.swing.JPanel();
-        labelNome = new javax.swing.JLabel();
-        txtNome = new javax.swing.JFormattedTextField();
+        labelNomeComprador = new javax.swing.JLabel();
+        txtNomeComprador = new javax.swing.JFormattedTextField();
         boxItem = new javax.swing.JComboBox<>();
         contadorItem = new javax.swing.JSpinner();
         painelItem = new javax.swing.JScrollPane();
@@ -41,7 +41,7 @@ public class main extends javax.swing.JFrame {
         btnConfirmar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         relatorio = new javax.swing.JPanel();
-        labelNome1 = new javax.swing.JLabel();
+        relLabelComprador = new javax.swing.JLabel();
         txtNome1 = new javax.swing.JFormattedTextField();
         boxItem1 = new javax.swing.JComboBox<>();
         painelRelVendas = new javax.swing.JScrollPane();
@@ -71,11 +71,11 @@ public class main extends javax.swing.JFrame {
 
         painelTabela.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
-        labelNome.setText("Comprador");
+        labelNomeComprador.setText("Comprador");
 
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
+        txtNomeComprador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
+                txtNomeCompradorActionPerformed(evt);
             }
         });
 
@@ -123,9 +123,9 @@ public class main extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tabelaVendasLayout.createSequentialGroup()
-                        .addComponent(labelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelNomeComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtNomeComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(tabelaVendasLayout.createSequentialGroup()
                         .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tabelaVendasLayout.createSequentialGroup()
@@ -154,8 +154,8 @@ public class main extends javax.swing.JFrame {
             .addGroup(tabelaVendasLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNome)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelNomeComprador)
+                    .addComponent(txtNomeComprador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boxItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,7 +180,7 @@ public class main extends javax.swing.JFrame {
 
         painelTabela.addTab("Vendas", tabelaVendas);
 
-        labelNome1.setText("Comprador");
+        relLabelComprador.setText("Comprador");
 
         txtNome1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,7 +231,7 @@ public class main extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnPesquisar))
                             .addGroup(relatorioLayout.createSequentialGroup()
-                                .addComponent(labelNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(relLabelComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txtNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -249,7 +249,7 @@ public class main extends javax.swing.JFrame {
             .addGroup(relatorioLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(relatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNome1)
+                    .addComponent(relLabelComprador)
                     .addComponent(txtNome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(relDataInicio)
                     .addComponent(relDataFinal)
@@ -334,9 +334,9 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnExcluirActionPerformed
 
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+    private void txtNomeCompradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeCompradorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
+    }//GEN-LAST:event_txtNomeCompradorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -384,8 +384,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton btnPesquisar;
     private javax.swing.JSpinner contadorItem;
     private javax.swing.JTable jTable1;
-    private javax.swing.JLabel labelNome;
-    private javax.swing.JLabel labelNome1;
+    private javax.swing.JLabel labelNomeComprador;
     private javax.swing.JLabel labelTotal;
     private javax.swing.JLabel labelTotal1;
     private javax.swing.JLabel labelValorTotal;
@@ -405,11 +404,12 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JTabbedPane painelTabela;
     private javax.swing.JLabel relDataFinal;
     private javax.swing.JLabel relDataInicio;
+    private javax.swing.JLabel relLabelComprador;
     private javax.swing.JPanel relatorio;
     private javax.swing.JPanel tabelaVendas;
     private javax.swing.JTextField txtDataFinal;
-    private javax.swing.JFormattedTextField txtNome;
     private javax.swing.JFormattedTextField txtNome1;
+    private javax.swing.JFormattedTextField txtNomeComprador;
     private javax.swing.JTextField txtrelDataInicio;
     private javax.swing.JTable vendasTable;
     // End of variables declaration//GEN-END:variables

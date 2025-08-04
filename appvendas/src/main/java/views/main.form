@@ -125,9 +125,9 @@
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="labelNome" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="labelNomeComprador" min="-2" pref="70" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txtNome" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="txtNomeComprador" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -168,8 +168,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelNomeComprador" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNomeComprador" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -200,14 +200,14 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelNome">
+            <Component class="javax.swing.JLabel" name="labelNomeComprador">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Comprador"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="txtNome">
+            <Component class="javax.swing.JFormattedTextField" name="txtNomeComprador">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeCompradorActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="boxItem">
@@ -315,7 +315,7 @@
                                       <Component id="btnPesquisar" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelNome1" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="relLabelComprador" min="-2" pref="70" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="txtNome1" min="-2" pref="130" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -339,7 +339,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelNome1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="relLabelComprador" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtNome1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="relDataInicio" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="relDataFinal" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -369,7 +369,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelNome1">
+            <Component class="javax.swing.JLabel" name="relLabelComprador">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Comprador"/>
               </Properties>
