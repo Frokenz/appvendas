@@ -41,6 +41,11 @@
                 <Property name="text" type="java.lang.String" value="Visualizar Produtos"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mnHistorico">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Historico de Vendas"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="mnBackup">

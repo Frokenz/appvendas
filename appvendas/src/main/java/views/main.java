@@ -61,6 +61,7 @@ public class main extends javax.swing.JFrame {
         mnProdutos = new javax.swing.JMenu();
         mnVisualizarClientes = new javax.swing.JMenuItem();
         mnVisualizarProdutos = new javax.swing.JMenuItem();
+        mnHistorico = new javax.swing.JMenuItem();
         mnBackup = new javax.swing.JMenu();
         Backup = new javax.swing.JMenuItem();
 
@@ -293,6 +294,9 @@ public class main extends javax.swing.JFrame {
         mnVisualizarProdutos.setText("Visualizar Produtos");
         mnProdutos.add(mnVisualizarProdutos);
 
+        mnHistorico.setText("Historico de Vendas");
+        mnProdutos.add(mnHistorico);
+
         menuBar.add(mnProdutos);
 
         mnBackup.setText("Backup");
@@ -391,6 +395,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnCadastrarClientes;
     private javax.swing.JMenuItem mnCadastrarProdutos;
     private javax.swing.JMenu mnClientes;
+    private javax.swing.JMenuItem mnHistorico;
     private javax.swing.JMenu mnPrincipal;
     private javax.swing.JMenu mnProdutos;
     private javax.swing.JMenuItem mnVisualizarClientes;
