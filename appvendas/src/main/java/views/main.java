@@ -15,6 +15,8 @@ public class main extends javax.swing.JFrame {
      */
     public main() {
         initComponents();
+        setLocationRelativeTo(null); //inicia a tela no centro
+        setResizable(false); // travar redimensionamento
     }
 
     /**
@@ -40,6 +42,7 @@ public class main extends javax.swing.JFrame {
         labelTotal = new javax.swing.JLabel();
         btnConfirmar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 10), new java.awt.Dimension(0, 10), new java.awt.Dimension(32767, 10));
         relatorio = new javax.swing.JPanel();
         relLabelComprador = new javax.swing.JLabel();
         txtNome1 = new javax.swing.JFormattedTextField();
@@ -67,9 +70,12 @@ public class main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1024, 720));
+        setMinimumSize(new java.awt.Dimension(1024, 720));
         setPreferredSize(new java.awt.Dimension(1024, 720));
 
         painelTabela.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        tabelaVendas.setPreferredSize(new java.awt.Dimension(1024, 720));
 
         labelNomeComprador.setText("Comprador");
 
@@ -144,10 +150,13 @@ public class main extends javax.swing.JFrame {
                             .addGroup(tabelaVendasLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(1, 1, 1))
+                                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(tabelaVendasLayout.createSequentialGroup()
+                                        .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         tabelaVendasLayout.setVerticalGroup(
             tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,8 +174,13 @@ public class main extends javax.swing.JFrame {
                 .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tabelaVendasLayout.createSequentialGroup()
                         .addComponent(btnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tabelaVendasLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(tabelaVendasLayout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(1, 1, 1)
@@ -175,7 +189,7 @@ public class main extends javax.swing.JFrame {
                         .addComponent(painelItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(labelValorTotal)))
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         painelTabela.addTab("Vendas", tabelaVendas);
@@ -383,6 +397,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnPesquisar;
     private javax.swing.JSpinner contadorItem;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel labelNomeComprador;
     private javax.swing.JLabel labelTotal;

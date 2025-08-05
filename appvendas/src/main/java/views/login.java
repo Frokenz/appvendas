@@ -4,6 +4,8 @@
  */
 package views;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author SUPORTE-TI
@@ -14,7 +16,12 @@ public class login extends javax.swing.JFrame {
      * Creates new form login
      */
     public login() {
+        
         initComponents();
+        setLocationRelativeTo(null); // coloca a tela no meio
+        
+        setResizable(false); // trava o redimensionamento
+        
     }
 
     /**
@@ -39,8 +46,8 @@ public class login extends javax.swing.JFrame {
         labelLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         labelLogin.setText("Login");
 
-        txtLogin.setActionCommand(null);
-        txtLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        txtLogin.setActionCommand("null");
+        txtLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLoginActionPerformed(evt);
@@ -50,12 +57,13 @@ public class login extends javax.swing.JFrame {
         labelSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         labelSenha.setText("Senha");
 
-        txtSenha.setActionCommand(null);
+        txtSenha.setActionCommand("null");
 
         labelCreditos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelCreditos.setText("Desenvolvido por Erick Rodrigues");
 
         btnEntrar.setText("Entrar");
+        btnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
@@ -115,12 +123,27 @@ public class login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLoginActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
+        String usuario = txtLogin.getText();
+        String senha = new String (txtSenha.getPassword());
+        
+        
+        // Validação Simples
+        if(usuario.equals("admin") && senha.equals("admin")){
+            JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
+            
+            new main().setVisible(true);
+            this.dispose();
+        }
+        else {
+        JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos!", "Erro de Login", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**

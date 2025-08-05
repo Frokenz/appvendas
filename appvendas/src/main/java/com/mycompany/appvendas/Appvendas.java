@@ -4,6 +4,8 @@
 
 package com.mycompany.appvendas;
 
+import views.login;
+
 /**
  *
  * @author SUPORTE-TI
@@ -11,6 +13,10 @@ package com.mycompany.appvendas;
 public class Appvendas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+  
+        java.awt.EventQueue.invokeLater(() -> {
+            new login().setVisible(true);
+        });
+        
+    };
 }
