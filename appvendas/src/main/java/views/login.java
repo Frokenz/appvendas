@@ -21,7 +21,7 @@ public class login extends javax.swing.JFrame {
         setLocationRelativeTo(null); // coloca a tela no meio
         setTitle("Login"); // titulo da tela
         setResizable(false); // trava o redimensionamento e impede maximizar
-        
+        getRootPane().setDefaultButton(btnEntrar);
     }
 
     /**
