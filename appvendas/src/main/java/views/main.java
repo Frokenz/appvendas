@@ -290,6 +290,7 @@ public class main extends javax.swing.JFrame {
         painelTabela.addTab("Relatórios", relatorio);
 
         mnPrincipal.setText("Principal");
+        mnPrincipal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         menuBar.add(mnPrincipal);
 
         mnClientes.setText("Cadastros");
