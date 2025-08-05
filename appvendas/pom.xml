@@ -13,6 +13,15 @@
         </repository>
     </repositories>
     <dependencies>
+        
+        <!-- SQLITE -->
+        <dependency>
+    <groupId>org.xerial</groupId>
+    <artifactId>sqlite-jdbc</artifactId>
+    <version>3.50.3.0</version> <!-- você pode ajustar para a última versão -->
+        </dependency>   
+        
+        
         <dependency>
             <groupId>unknown.binary</groupId>
             <artifactId>AbsoluteLayout</artifactId>
