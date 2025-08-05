@@ -29,42 +29,43 @@ public class CadProdutos extends javax.swing.JDialog {
     private void initComponents() {
 
         CadastrarProdutos = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        cadLabelIdProd = new javax.swing.JLabel();
+        cadTxtIdProd = new javax.swing.JTextField();
+        cadLabelNomeProd = new javax.swing.JLabel();
+        cadTxtNomeProd = new javax.swing.JTextField();
+        cadBtnCadastrarProd = new javax.swing.JButton();
+        cadLabelQuantProd = new javax.swing.JLabel();
+        cadTxtQuantProd = new javax.swing.JTextField();
+        LabelCadProd = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         CadastrarProdutos.setName(""); // NOI18N
 
-        jLabel1.setText("IdProduto");
+        cadLabelIdProd.setText("IdProduto");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        cadTxtIdProd.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cadTxtIdProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                cadTxtIdProdActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Nome");
+        cadLabelNomeProd.setText("Nome");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        cadTxtNomeProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                cadTxtNomeProdActionPerformed(evt);
             }
         });
 
-        jButton1.setText("jButton1");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cadBtnCadastrarProd.setText("Cadastrar");
+        cadBtnCadastrarProd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Cadastro de Produtos");
+        cadLabelQuantProd.setText("Quantidade");
 
-        jLabel4.setText("Quantidade");
+        LabelCadProd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LabelCadProd.setText("Cadastro de Produtos");
 
         javax.swing.GroupLayout CadastrarProdutosLayout = new javax.swing.GroupLayout(CadastrarProdutos);
         CadastrarProdutos.setLayout(CadastrarProdutosLayout);
@@ -76,45 +77,45 @@ public class CadProdutos extends javax.swing.JDialog {
                         .addGap(67, 67, 67)
                         .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(CadastrarProdutosLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(cadLabelIdProd)
                                 .addGap(27, 27, 27)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cadTxtIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(CadastrarProdutosLayout.createSequentialGroup()
                                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel2))
+                                    .addComponent(cadLabelQuantProd)
+                                    .addComponent(cadLabelNomeProd))
                                 .addGap(18, 18, 18)
                                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(cadTxtNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cadTxtQuantProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(CadastrarProdutosLayout.createSequentialGroup()
                         .addGap(164, 164, 164)
-                        .addComponent(jButton1))
+                        .addComponent(cadBtnCadastrarProd))
                     .addGroup(CadastrarProdutosLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                        .addComponent(LabelCadProd)))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         CadastrarProdutosLayout.setVerticalGroup(
             CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CadastrarProdutosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelCadProd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cadLabelIdProd)
+                    .addComponent(cadTxtIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cadLabelNomeProd)
+                    .addComponent(cadTxtNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cadLabelQuantProd)
+                    .addComponent(cadTxtQuantProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addComponent(jButton1)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addComponent(cadBtnCadastrarProd)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -133,14 +134,14 @@ public class CadProdutos extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void cadTxtIdProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadTxtIdProdActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_cadTxtIdProdActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void cadTxtNomeProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadTxtNomeProdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_cadTxtNomeProdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,13 +188,13 @@ public class CadProdutos extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CadastrarProdutos;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel LabelCadProd;
+    private javax.swing.JButton cadBtnCadastrarProd;
+    private javax.swing.JLabel cadLabelIdProd;
+    private javax.swing.JLabel cadLabelNomeProd;
+    private javax.swing.JLabel cadLabelQuantProd;
+    private javax.swing.JTextField cadTxtIdProd;
+    private javax.swing.JTextField cadTxtNomeProd;
+    private javax.swing.JTextField cadTxtQuantProd;
     // End of variables declaration//GEN-END:variables
 }
