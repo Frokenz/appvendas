@@ -66,6 +66,7 @@ public class CadProdutos extends javax.swing.JDialog {
         cadLabelQuantProd.setText("Quantidade");
 
         LabelCadProd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LabelCadProd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelCadProd.setText("Cadastro de Produtos");
         LabelCadProd.setPreferredSize(new java.awt.Dimension(150, 20));
 
@@ -83,9 +84,9 @@ public class CadProdutos extends javax.swing.JDialog {
                             .addComponent(cadLabelIdProd))
                         .addGap(18, 18, 18)
                         .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cadTxtIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cadTxtNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cadTxtQuantProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cadTxtQuantProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cadTxtIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(CadastrarProdutosLayout.createSequentialGroup()
                         .addGap(164, 164, 164)
                         .addComponent(cadBtnCadastrarProd)))
@@ -135,6 +136,7 @@ public class CadProdutos extends javax.swing.JDialog {
 
     private void cadTxtIdProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadTxtIdProdActionPerformed
         // TODO add your handling code here:
+      
         
     }//GEN-LAST:event_cadTxtIdProdActionPerformed
 

@@ -17,7 +17,7 @@ public class main extends javax.swing.JFrame {
         initComponents();
         setTitle("Tela Principal"); //nome da tela
         setLocationRelativeTo(null); //inicia a tela no centro
-        setResizable(true); // travar redimensionamento
+        setResizable(false); // travar redimensionamento
         setSize(1050,680); // trava o tamanho
         
     }
@@ -372,7 +372,9 @@ public class main extends javax.swing.JFrame {
 
     private void mnCadastrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnCadastrarClientesActionPerformed
         // TODO add your handling code here:
-        
+        CadClientes dialog = new CadClientes (this, true);
+        dialog.setLocationRelativeTo(this);
+        dialog.setVisible(true);
     }//GEN-LAST:event_mnCadastrarClientesActionPerformed
 
     private void mnCadastrarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnCadastrarProdutosActionPerformed

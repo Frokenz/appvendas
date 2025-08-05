@@ -21,7 +21,8 @@ public class login extends javax.swing.JFrame {
         setLocationRelativeTo(null); // coloca a tela no meio
         setTitle("Login"); // titulo da tela
         setResizable(false); // trava o redimensionamento e impede maximizar
-        getRootPane().setDefaultButton(btnEntrar);
+        getRootPane().setDefaultButton(btnEntrar);  
+        txtLogin.addActionListener(evt -> btnEntrar.doClick());
     }
 
     /**
@@ -123,8 +124,12 @@ public class login extends javax.swing.JFrame {
     
     private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtLoginActionPerformed
 
+  
+    
+    
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
         String usuario = txtLogin.getText();
