@@ -19,8 +19,8 @@ public class login extends javax.swing.JFrame {
         
         initComponents();
         setLocationRelativeTo(null); // coloca a tela no meio
-        
-        setResizable(false); // trava o redimensionamento
+        setTitle("Login"); // titulo da tela
+        setResizable(false); // trava o redimensionamento e impede maximizar
         
     }
 
@@ -136,7 +136,6 @@ public class login extends javax.swing.JFrame {
         
         // Validação Simples
         if(usuario.equals("admin") && senha.equals("admin")){
-            JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
             
             new main().setVisible(true);
             this.dispose();

@@ -15,8 +15,11 @@ public class main extends javax.swing.JFrame {
      */
     public main() {
         initComponents();
+        setTitle("Tela Principal"); //nome da tela
         setLocationRelativeTo(null); //inicia a tela no centro
-        setResizable(false); // travar redimensionamento
+        setResizable(true); // travar redimensionamento
+        setSize(1050,680); // trava o tamanho
+        
     }
 
     /**
@@ -75,8 +78,6 @@ public class main extends javax.swing.JFrame {
 
         painelTabela.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
-        tabelaVendas.setPreferredSize(new java.awt.Dimension(1024, 720));
-
         labelNomeComprador.setText("Comprador");
 
         txtNomeComprador.addActionListener(new java.awt.event.ActionListener() {
@@ -133,13 +134,14 @@ public class main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtNomeComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(tabelaVendasLayout.createSequentialGroup()
-                        .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tabelaVendasLayout.createSequentialGroup()
                                 .addComponent(boxItem, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(contadorItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnAdicionar))
+                                .addComponent(contadorItem)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnAdicionar)
+                                .addGap(238, 238, 238))
                             .addGroup(tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(labelValorTotal, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(painelItem, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -156,7 +158,7 @@ public class main extends javax.swing.JFrame {
                                         .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addGap(11, 11, 11))
         );
         tabelaVendasLayout.setVerticalGroup(
             tabelaVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,7 +191,7 @@ public class main extends javax.swing.JFrame {
                         .addComponent(painelItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(labelValorTotal)))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         painelTabela.addTab("Vendas", tabelaVendas);
@@ -293,9 +295,21 @@ public class main extends javax.swing.JFrame {
         mnClientes.setText("Cadastros");
 
         mnCadastrarClientes.setText("Cadastrar Clientes");
+        mnCadastrarClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mnCadastrarClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnCadastrarClientesActionPerformed(evt);
+            }
+        });
         mnClientes.add(mnCadastrarClientes);
 
         mnCadastrarProdutos.setText("Cadastrar Produtos");
+        mnCadastrarProdutos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mnCadastrarProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnCadastrarProdutosActionPerformed(evt);
+            }
+        });
         mnClientes.add(mnCadastrarProdutos);
 
         menuBar.add(mnClientes);
@@ -303,12 +317,15 @@ public class main extends javax.swing.JFrame {
         mnProdutos.setText("Consultas");
 
         mnVisualizarClientes.setText("Visualizar Clientes");
+        mnVisualizarClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         mnProdutos.add(mnVisualizarClientes);
 
         mnVisualizarProdutos.setText("Visualizar Produtos");
+        mnVisualizarProdutos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         mnProdutos.add(mnVisualizarProdutos);
 
         mnHistorico.setText("Historico de Vendas");
+        mnHistorico.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         mnProdutos.add(mnHistorico);
 
         menuBar.add(mnProdutos);
@@ -326,7 +343,7 @@ public class main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelTabela, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+            .addComponent(painelTabela)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,6 +368,21 @@ public class main extends javax.swing.JFrame {
     private void txtNomeCompradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeCompradorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeCompradorActionPerformed
+
+    private void mnCadastrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnCadastrarClientesActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_mnCadastrarClientesActionPerformed
+
+    private void mnCadastrarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnCadastrarProdutosActionPerformed
+            // TODO add your handling code here:
+            
+            CadProdutos dialog = new CadProdutos(this, true);
+            dialog.setLocationRelativeTo(this);
+            dialog.setVisible(true);
+           
+            
+    }//GEN-LAST:event_mnCadastrarProdutosActionPerformed
 
     /**
      * @param args the command line arguments
