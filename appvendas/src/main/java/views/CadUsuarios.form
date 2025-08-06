@@ -48,7 +48,7 @@
                       <Component id="cadLabelNomeUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="cadLabelIdUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="21" max="32767" attributes="0"/>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="cadTxtIdUsuario" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -56,7 +56,7 @@
                           <Component id="cadTxtNomeUsuario" pref="189" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="72" max="32767" attributes="0"/>
+                  <EmptySpace pref="66" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
@@ -113,6 +113,15 @@
         <Component class="javax.swing.JLabel" name="cadLabelIdUsuario">
           <Properties>
             <Property name="text" type="java.lang.String" value="Id Usu&#xe1;rio"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="cadTxtIdUsuario">
@@ -132,6 +141,15 @@
         <Component class="javax.swing.JLabel" name="cadLabelNomeUsuario">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nome:"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="cadTxtNomeUsuario">
@@ -142,6 +160,15 @@
         <Component class="javax.swing.JLabel" name="cadLabelSenha">
           <Properties>
             <Property name="text" type="java.lang.String" value="Senha:"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="cadBtnCadastrarUsuario">

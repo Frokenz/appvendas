@@ -49,6 +49,9 @@ public class CadUsuarios extends javax.swing.JDialog {
         LabelUsers.setPreferredSize(new java.awt.Dimension(150, 20));
 
         cadLabelIdUsuario.setText("Id Usuário");
+        cadLabelIdUsuario.setMaximumSize(new java.awt.Dimension(65, 16));
+        cadLabelIdUsuario.setMinimumSize(new java.awt.Dimension(65, 16));
+        cadLabelIdUsuario.setPreferredSize(new java.awt.Dimension(65, 16));
 
         cadTxtIdUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         cadTxtIdUsuario.setEnabled(false);
@@ -60,6 +63,9 @@ public class CadUsuarios extends javax.swing.JDialog {
         });
 
         cadLabelNomeUsuario.setText("Nome:");
+        cadLabelNomeUsuario.setMaximumSize(new java.awt.Dimension(65, 16));
+        cadLabelNomeUsuario.setMinimumSize(new java.awt.Dimension(65, 16));
+        cadLabelNomeUsuario.setPreferredSize(new java.awt.Dimension(65, 16));
 
         cadTxtNomeUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +74,9 @@ public class CadUsuarios extends javax.swing.JDialog {
         });
 
         cadLabelSenha.setText("Senha:");
+        cadLabelSenha.setMaximumSize(new java.awt.Dimension(65, 16));
+        cadLabelSenha.setMinimumSize(new java.awt.Dimension(65, 16));
+        cadLabelSenha.setPreferredSize(new java.awt.Dimension(65, 16));
 
         cadBtnCadastrarUsuario.setText("Cadastrar");
         cadBtnCadastrarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -85,16 +94,16 @@ public class CadUsuarios extends javax.swing.JDialog {
             .addGroup(CadastrarClientesLayout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cadLabelSenha)
-                    .addComponent(cadLabelNomeUsuario)
-                    .addComponent(cadLabelIdUsuario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                    .addComponent(cadLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cadLabelNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cadLabelIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cadTxtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPasswordField1)
                         .addComponent(cadTxtNomeUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
             .addGroup(CadastrarClientesLayout.createSequentialGroup()
                 .addGap(164, 164, 164)
                 .addComponent(cadBtnCadastrarUsuario)
@@ -111,15 +120,15 @@ public class CadUsuarios extends javax.swing.JDialog {
                 .addComponent(LabelUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadLabelIdUsuario)
+                    .addComponent(cadLabelIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cadTxtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadLabelNomeUsuario)
+                    .addComponent(cadLabelNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cadTxtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadLabelSenha)
+                    .addComponent(cadLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addComponent(cadBtnCadastrarUsuario)
