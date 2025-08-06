@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package views;
-
+import classes.LoginValidate;
 import javax.swing.JOptionPane;
 
 /**
@@ -132,7 +132,27 @@ public class login extends javax.swing.JFrame {
     
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
+    
+        // VALIDAÇÃO COM BANCO DE DADOS
+        
         String usuario = txtLogin.getText();
+        String senha = new String(txtSenha.getPassword());
+        
+        LoginValidate validador = new LoginValidate();
+        if (validador.validarLogin(usuario, senha)){
+            JOptionPane.showMessageDialog(this, "Login efetuado com sucesso!");
+          
+            // para abrir tela principal
+            new main().setVisible(true);
+            this.dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.");
+        }
+        
+        /**  VALIDAÇÃO SIMPLES
+         * 
+         * String usuario = txtLogin.getText();
         String senha = new String (txtSenha.getPassword());
         
         
@@ -146,11 +166,13 @@ public class login extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos!", "Erro de Login", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
-
+**/
+      
+      
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+   
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -174,13 +196,10 @@ public class login extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new login().setVisible(true);
+      
             }
-        });
-    }
+       
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
