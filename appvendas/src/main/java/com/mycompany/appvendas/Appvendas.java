@@ -5,7 +5,7 @@
 package com.mycompany.appvendas;
 
 import views.login;
-
+import views.main;
 /**
  *
  * @author SUPORTE-TI
@@ -15,7 +15,7 @@ public class Appvendas {
     public static void main(String[] args) {
   
         java.awt.EventQueue.invokeLater(() -> {
-            new login().setVisible(true);
+            new main().setVisible(true);
         });
         
     };

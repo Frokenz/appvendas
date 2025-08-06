@@ -16,6 +16,8 @@ public class CadClientes extends javax.swing.JDialog {
     public CadClientes(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setSize(400, 300);
+        setTitle("Cadastro de Clientes");
     }
 
     /**
@@ -44,6 +46,7 @@ public class CadClientes extends javax.swing.JDialog {
         cadLabelIdClient.setText("Id Cliente");
 
         cadTxtIdClient.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cadTxtIdClient.setEnabled(false);
         cadTxtIdClient.setMinimumSize(new java.awt.Dimension(65, 25));
         cadTxtIdClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +84,7 @@ public class CadClientes extends javax.swing.JDialog {
                             .addComponent(cadLabelQuantClient)
                             .addComponent(cadLabelNomeClient)
                             .addComponent(cadLabelIdClient))
-                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                         .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cadTxtNomeClient, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cadTxtQuantClient, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -89,9 +92,9 @@ public class CadClientes extends javax.swing.JDialog {
                     .addGroup(CadastrarClientesLayout.createSequentialGroup()
                         .addGap(164, 164, 164)
                         .addComponent(cadBtnCadastrarClient)))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CadastrarClientesLayout.createSequentialGroup()
-                .addGap(0, 125, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(LabelCadClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(125, 125, 125))
         );

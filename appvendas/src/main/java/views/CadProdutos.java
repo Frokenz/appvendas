@@ -17,6 +17,7 @@ public class CadProdutos extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setTitle("Cadastro de Produtos"); // mudar o nome da janela
+        setSize(400, 300);
     }
 
     /**
@@ -45,6 +46,7 @@ public class CadProdutos extends javax.swing.JDialog {
         cadLabelIdProd.setText("Id Produto");
 
         cadTxtIdProd.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cadTxtIdProd.setEnabled(false);
         cadTxtIdProd.setMinimumSize(new java.awt.Dimension(65, 25));
         cadTxtIdProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
