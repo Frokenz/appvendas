@@ -4,6 +4,13 @@
  */
 package views;
 
+import javax.swing.JOptionPane;
+import models.UsuarioModel;
+import classes.UsuarioDAO;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author SUPORTE-TI
@@ -32,12 +39,12 @@ public class CadUsuarios extends javax.swing.JDialog {
         CadastrarClientes = new javax.swing.JPanel();
         LabelUsers = new javax.swing.JLabel();
         cadLabelIdUsuario = new javax.swing.JLabel();
-        cadTxtIdUsuario = new javax.swing.JTextField();
+        txtIdUsuario = new javax.swing.JTextField();
         cadLabelNomeUsuario = new javax.swing.JLabel();
-        cadTxtNomeUsuario = new javax.swing.JTextField();
+        txtLogin = new javax.swing.JTextField();
         cadLabelSenha = new javax.swing.JLabel();
-        cadBtnCadastrarUsuario = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtSenha = new javax.swing.JPasswordField();
+        btnCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -53,23 +60,23 @@ public class CadUsuarios extends javax.swing.JDialog {
         cadLabelIdUsuario.setMinimumSize(new java.awt.Dimension(65, 16));
         cadLabelIdUsuario.setPreferredSize(new java.awt.Dimension(65, 16));
 
-        cadTxtIdUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        cadTxtIdUsuario.setEnabled(false);
-        cadTxtIdUsuario.setMinimumSize(new java.awt.Dimension(65, 25));
-        cadTxtIdUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtIdUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtIdUsuario.setEnabled(false);
+        txtIdUsuario.setMinimumSize(new java.awt.Dimension(65, 25));
+        txtIdUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadTxtIdUsuarioActionPerformed(evt);
+                txtIdUsuarioActionPerformed(evt);
             }
         });
 
-        cadLabelNomeUsuario.setText("Nome:");
+        cadLabelNomeUsuario.setText("Login:");
         cadLabelNomeUsuario.setMaximumSize(new java.awt.Dimension(65, 16));
         cadLabelNomeUsuario.setMinimumSize(new java.awt.Dimension(65, 16));
         cadLabelNomeUsuario.setPreferredSize(new java.awt.Dimension(65, 16));
 
-        cadTxtNomeUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadTxtNomeUsuarioActionPerformed(evt);
+                txtLoginActionPerformed(evt);
             }
         });
 
@@ -78,12 +85,17 @@ public class CadUsuarios extends javax.swing.JDialog {
         cadLabelSenha.setMinimumSize(new java.awt.Dimension(65, 16));
         cadLabelSenha.setPreferredSize(new java.awt.Dimension(65, 16));
 
-        cadBtnCadastrarUsuario.setText("Cadastrar");
-        cadBtnCadastrarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        txtSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                txtSenhaActionPerformed(evt);
+            }
+        });
+
+        btnCadastrar.setText("Cadastrar");
+        btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
             }
         });
 
@@ -99,14 +111,14 @@ public class CadUsuarios extends javax.swing.JDialog {
                     .addComponent(cadLabelIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cadTxtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPasswordField1)
-                        .addComponent(cadTxtNomeUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)))
+                        .addComponent(txtSenha)
+                        .addComponent(txtLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)))
                 .addContainerGap(66, Short.MAX_VALUE))
             .addGroup(CadastrarClientesLayout.createSequentialGroup()
                 .addGap(164, 164, 164)
-                .addComponent(cadBtnCadastrarUsuario)
+                .addComponent(btnCadastrar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CadastrarClientesLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -121,17 +133,17 @@ public class CadUsuarios extends javax.swing.JDialog {
                 .addGap(40, 40, 40)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cadLabelIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadTxtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cadLabelNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadTxtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(CadastrarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cadLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
-                .addComponent(cadBtnCadastrarUsuario)
+                .addComponent(btnCadastrar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -149,19 +161,52 @@ public class CadUsuarios extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cadTxtIdUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadTxtIdUsuarioActionPerformed
+    private void txtIdUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdUsuarioActionPerformed
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_cadTxtIdUsuarioActionPerformed
+    }//GEN-LAST:event_txtIdUsuarioActionPerformed
 
-    private void cadTxtNomeUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadTxtNomeUsuarioActionPerformed
+    private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cadTxtNomeUsuarioActionPerformed
+    }//GEN-LAST:event_txtLoginActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_txtSenhaActionPerformed
 
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        // TODO add your handling code here:
+        
+        String Login = txtLogin.getText().trim();
+        String Senha = txtSenha.getText().trim();
+        
+        if (Login.isEmpty() || Senha.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Preencha todos os campos!", "Erro", JOptionPane.ERROR_MESSAGE);
+            
+        }
+        
+        UsuarioModel usuario = new UsuarioModel(Login, Senha);
+        UsuarioDAO dao = new UsuarioDAO();
+        boolean sucesso = false;
+        try {
+            sucesso = dao.inserirUsuario(usuario);
+        } catch (SQLException ex) {
+            Logger.getLogger(CadUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        if(sucesso){
+            JOptionPane.showMessageDialog(this, "Usuário Cadastrado!");
+            LimparCampos();
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Cadastro Negado!");
+        }
+    }//GEN-LAST:event_btnCadastrarActionPerformed
+    
+      private void LimparCampos() {
+        txtLogin.setText("");
+        txtSenha.setText("");
+       }        
     /**
      * @param args the command line arguments
      */
@@ -210,12 +255,12 @@ public class CadUsuarios extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CadastrarClientes;
     private javax.swing.JLabel LabelUsers;
-    private javax.swing.JButton cadBtnCadastrarUsuario;
+    private javax.swing.JButton btnCadastrar;
     private javax.swing.JLabel cadLabelIdUsuario;
     private javax.swing.JLabel cadLabelNomeUsuario;
     private javax.swing.JLabel cadLabelSenha;
-    private javax.swing.JTextField cadTxtIdUsuario;
-    private javax.swing.JTextField cadTxtNomeUsuario;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField txtIdUsuario;
+    private javax.swing.JTextField txtLogin;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }

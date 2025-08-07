@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import models.ProdutoModel;
-import classes.ConexaoDB;
 
 
 /**
