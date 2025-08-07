@@ -49,15 +49,24 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cadLabelQuantProd" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="cadLabelNomeProd" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="cadLabelIdProd" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="15" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cadTxtNomeProd" min="-2" pref="189" max="-2" attributes="0"/>
-                              <Component id="cadTxtQuantProd" min="-2" pref="189" max="-2" attributes="0"/>
-                              <Component id="cadTxtIdProd" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cadLabelQuantProd" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cadLabelNomeProd" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cadLabelIdProd" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cadTxtNomeProd" min="-2" pref="189" max="-2" attributes="0"/>
+                                      <Component id="cadTxtQuantProd" min="-2" pref="189" max="-2" attributes="0"/>
+                                      <Component id="cadTxtIdProd" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="cadLabelPrecoProd" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                                  <Component id="cadTxtPrecoProd" min="-2" pref="189" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -89,22 +98,39 @@
                       <Component id="cadLabelNomeProd" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cadTxtNomeProd" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="cadLabelQuantProd" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="cadTxtQuantProd" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cadLabelPrecoProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cadTxtPrecoProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
                   <Component id="cadBtnCadastrarProd" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
+        <Component class="javax.swing.JLabel" name="LabelCadProd">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Cadastro de Produtos"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[150, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
         <Component class="javax.swing.JLabel" name="cadLabelIdProd">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Id Produto"/>
+            <Property name="text" type="java.lang.String" value="Id Produto:"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[65, 16]"/>
             </Property>
@@ -132,7 +158,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="cadLabelNomeProd">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nome"/>
+            <Property name="text" type="java.lang.String" value="Nome:"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[65, 16]"/>
             </Property>
@@ -159,7 +185,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="cadLabelQuantProd">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Quantidade"/>
+            <Property name="text" type="java.lang.String" value="Quantidade:"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[65, 16]"/>
             </Property>
@@ -173,17 +199,21 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cadTxtQuantProd">
         </Component>
-        <Component class="javax.swing.JLabel" name="LabelCadProd">
+        <Component class="javax.swing.JLabel" name="cadLabelPrecoProd">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="1"/>
+            <Property name="text" type="java.lang.String" value="Pre&#xe7;o:"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
             </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Cadastro de Produtos"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[65, 16]"/>
+            </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[150, 20]"/>
+              <Dimension value="[65, 16]"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="cadTxtPrecoProd">
         </Component>
       </SubComponents>
     </Container>
