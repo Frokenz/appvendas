@@ -51,7 +51,7 @@ public class main extends javax.swing.JFrame {
         mnCadastrarClientes = new javax.swing.JMenuItem();
         mnCadastrarProdutos = new javax.swing.JMenuItem();
         mnCadastrarUsuarios = new javax.swing.JMenuItem();
-        mnProdutos = new javax.swing.JMenu();
+        mnConsultas = new javax.swing.JMenu();
         mnVisualizarClientes = new javax.swing.JMenuItem();
         mnVisualizarProdutos = new javax.swing.JMenuItem();
         mnHistorico = new javax.swing.JMenuItem();
@@ -245,21 +245,21 @@ public class main extends javax.swing.JFrame {
 
         menuBar.add(mnClientes);
 
-        mnProdutos.setText("Consultas");
+        mnConsultas.setText("Consultas");
 
         mnVisualizarClientes.setText("Visualizar Clientes");
         mnVisualizarClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        mnProdutos.add(mnVisualizarClientes);
+        mnConsultas.add(mnVisualizarClientes);
 
         mnVisualizarProdutos.setText("Visualizar Produtos");
         mnVisualizarProdutos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        mnProdutos.add(mnVisualizarProdutos);
+        mnConsultas.add(mnVisualizarProdutos);
 
         mnHistorico.setText("Historico de Vendas");
         mnHistorico.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        mnProdutos.add(mnHistorico);
+        mnConsultas.add(mnHistorico);
 
-        menuBar.add(mnProdutos);
+        menuBar.add(mnConsultas);
 
         mnBackup.setText("Backup");
 
@@ -376,8 +376,8 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnCadastrarProdutos;
     private javax.swing.JMenuItem mnCadastrarUsuarios;
     private javax.swing.JMenu mnClientes;
+    private javax.swing.JMenu mnConsultas;
     private javax.swing.JMenuItem mnHistorico;
-    private javax.swing.JMenu mnProdutos;
     private javax.swing.JMenu mnVendas;
     private javax.swing.JMenuItem mnVisualizarClientes;
     private javax.swing.JMenuItem mnVisualizarProdutos;
