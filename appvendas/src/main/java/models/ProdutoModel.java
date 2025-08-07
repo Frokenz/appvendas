@@ -8,19 +8,19 @@ package models;
  *
  * @author SUPORTE-TI
  */
-public class Produto {
+public class ProdutoModel {
     private int IdProduto;
     private String NomeProduto;
     private int QuantProduto;
     private double PrecoProduto;
 
-public Produto() {
+public ProdutoModel() {
 
 }
 
 // Construtor sem ID (para cadastro)
-public Produto(int IdProduto, String NomeProduto, int QuantProduto, double PrecoProduto){
-    this.IdProduto = IdProduto;
+public ProdutoModel(String NomeProduto, int QuantProduto, double PrecoProduto){
+    
     this.NomeProduto = NomeProduto;
     this.QuantProduto = QuantProduto;
     this.PrecoProduto = PrecoProduto;

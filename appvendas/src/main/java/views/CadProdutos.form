@@ -51,27 +51,27 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="cadLabelQuantProd" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cadLabelNomeProd" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cadLabelIdProd" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelQuantProduto" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelNomeProduto" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelIdProduto" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="15" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="cadTxtNomeProd" min="-2" pref="189" max="-2" attributes="0"/>
-                                      <Component id="cadTxtQuantProd" min="-2" pref="189" max="-2" attributes="0"/>
-                                      <Component id="cadTxtIdProd" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                                      <Component id="txtNomeProduto" min="-2" pref="189" max="-2" attributes="0"/>
+                                      <Component id="txtQuantProduto" min="-2" pref="189" max="-2" attributes="0"/>
+                                      <Component id="txtIdProduto" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="cadLabelPrecoProd" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPrecoProduto" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="15" max="32767" attributes="0"/>
-                                  <Component id="cadTxtPrecoProd" min="-2" pref="189" max="-2" attributes="0"/>
+                                  <Component id="txtPrecoProduto" min="-2" pref="189" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
-                          <Component id="cadBtnCadastrarProd" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCadastrar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="66" max="32767" attributes="0"/>
@@ -90,26 +90,26 @@
                   <Component id="LabelCadProd" min="-2" pref="32" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cadLabelIdProd" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cadTxtIdProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelIdProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtIdProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cadLabelNomeProd" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cadTxtNomeProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelNomeProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNomeProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cadLabelQuantProd" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cadTxtQuantProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelQuantProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtQuantProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cadLabelPrecoProd" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cadTxtPrecoProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelPrecoProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPrecoProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="28" max="32767" attributes="0"/>
-                  <Component id="cadBtnCadastrarProd" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCadastrar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -128,7 +128,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="cadLabelIdProd">
+        <Component class="javax.swing.JLabel" name="labelIdProduto">
           <Properties>
             <Property name="text" type="java.lang.String" value="Id Produto:"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -142,7 +142,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="cadTxtIdProd">
+        <Component class="javax.swing.JTextField" name="txtIdProduto">
           <Properties>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Text Cursor"/>
@@ -153,10 +153,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadTxtIdProdActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdProdutoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="cadLabelNomeProd">
+        <Component class="javax.swing.JLabel" name="labelNomeProduto">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nome:"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -170,20 +170,12 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="cadTxtNomeProd">
+        <Component class="javax.swing.JTextField" name="txtNomeProduto">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadTxtNomeProdActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeProdutoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="cadBtnCadastrarProd">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cadastrar"/>
-            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Hand Cursor"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="cadLabelQuantProd">
+        <Component class="javax.swing.JLabel" name="labelQuantProduto">
           <Properties>
             <Property name="text" type="java.lang.String" value="Quantidade:"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -197,9 +189,9 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="cadTxtQuantProd">
+        <Component class="javax.swing.JTextField" name="txtQuantProduto">
         </Component>
-        <Component class="javax.swing.JLabel" name="cadLabelPrecoProd">
+        <Component class="javax.swing.JLabel" name="labelPrecoProduto">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pre&#xe7;o:"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -213,7 +205,18 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="cadTxtPrecoProd">
+        <Component class="javax.swing.JTextField" name="txtPrecoProduto">
+        </Component>
+        <Component class="javax.swing.JButton" name="btnCadastrar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cadastrar"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCadastrarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

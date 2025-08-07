@@ -4,6 +4,12 @@
  */
 package views;
 
+import javax.swing.JOptionPane;
+import models.ProdutoModel;
+import classes.ProdutoDAO;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author SUPORTE-TI
@@ -31,15 +37,15 @@ public class CadProdutos extends javax.swing.JDialog {
 
         CadastrarProdutos = new javax.swing.JPanel();
         LabelCadProd = new javax.swing.JLabel();
-        cadLabelIdProd = new javax.swing.JLabel();
-        cadTxtIdProd = new javax.swing.JTextField();
-        cadLabelNomeProd = new javax.swing.JLabel();
-        cadTxtNomeProd = new javax.swing.JTextField();
-        cadBtnCadastrarProd = new javax.swing.JButton();
-        cadLabelQuantProd = new javax.swing.JLabel();
-        cadTxtQuantProd = new javax.swing.JTextField();
-        cadLabelPrecoProd = new javax.swing.JLabel();
-        cadTxtPrecoProd = new javax.swing.JTextField();
+        labelIdProduto = new javax.swing.JLabel();
+        txtIdProduto = new javax.swing.JTextField();
+        labelNomeProduto = new javax.swing.JLabel();
+        txtNomeProduto = new javax.swing.JTextField();
+        labelQuantProduto = new javax.swing.JLabel();
+        txtQuantProduto = new javax.swing.JTextField();
+        labelPrecoProduto = new javax.swing.JLabel();
+        txtPrecoProduto = new javax.swing.JTextField();
+        btnCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -50,43 +56,48 @@ public class CadProdutos extends javax.swing.JDialog {
         LabelCadProd.setText("Cadastro de Produtos");
         LabelCadProd.setPreferredSize(new java.awt.Dimension(150, 20));
 
-        cadLabelIdProd.setText("Id Produto:");
-        cadLabelIdProd.setMaximumSize(new java.awt.Dimension(65, 16));
-        cadLabelIdProd.setMinimumSize(new java.awt.Dimension(65, 16));
-        cadLabelIdProd.setPreferredSize(new java.awt.Dimension(65, 16));
+        labelIdProduto.setText("Id Produto:");
+        labelIdProduto.setMaximumSize(new java.awt.Dimension(65, 16));
+        labelIdProduto.setMinimumSize(new java.awt.Dimension(65, 16));
+        labelIdProduto.setPreferredSize(new java.awt.Dimension(65, 16));
 
-        cadTxtIdProd.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        cadTxtIdProd.setEnabled(false);
-        cadTxtIdProd.setMinimumSize(new java.awt.Dimension(65, 25));
-        cadTxtIdProd.addActionListener(new java.awt.event.ActionListener() {
+        txtIdProduto.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtIdProduto.setEnabled(false);
+        txtIdProduto.setMinimumSize(new java.awt.Dimension(65, 25));
+        txtIdProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadTxtIdProdActionPerformed(evt);
+                txtIdProdutoActionPerformed(evt);
             }
         });
 
-        cadLabelNomeProd.setText("Nome:");
-        cadLabelNomeProd.setMaximumSize(new java.awt.Dimension(65, 16));
-        cadLabelNomeProd.setMinimumSize(new java.awt.Dimension(65, 16));
-        cadLabelNomeProd.setPreferredSize(new java.awt.Dimension(65, 16));
+        labelNomeProduto.setText("Nome:");
+        labelNomeProduto.setMaximumSize(new java.awt.Dimension(65, 16));
+        labelNomeProduto.setMinimumSize(new java.awt.Dimension(65, 16));
+        labelNomeProduto.setPreferredSize(new java.awt.Dimension(65, 16));
 
-        cadTxtNomeProd.addActionListener(new java.awt.event.ActionListener() {
+        txtNomeProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadTxtNomeProdActionPerformed(evt);
+                txtNomeProdutoActionPerformed(evt);
             }
         });
 
-        cadBtnCadastrarProd.setText("Cadastrar");
-        cadBtnCadastrarProd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        labelQuantProduto.setText("Quantidade:");
+        labelQuantProduto.setMaximumSize(new java.awt.Dimension(65, 16));
+        labelQuantProduto.setMinimumSize(new java.awt.Dimension(65, 16));
+        labelQuantProduto.setPreferredSize(new java.awt.Dimension(65, 16));
 
-        cadLabelQuantProd.setText("Quantidade:");
-        cadLabelQuantProd.setMaximumSize(new java.awt.Dimension(65, 16));
-        cadLabelQuantProd.setMinimumSize(new java.awt.Dimension(65, 16));
-        cadLabelQuantProd.setPreferredSize(new java.awt.Dimension(65, 16));
+        labelPrecoProduto.setText("Preço:");
+        labelPrecoProduto.setMaximumSize(new java.awt.Dimension(65, 16));
+        labelPrecoProduto.setMinimumSize(new java.awt.Dimension(65, 16));
+        labelPrecoProduto.setPreferredSize(new java.awt.Dimension(65, 16));
 
-        cadLabelPrecoProd.setText("Preço:");
-        cadLabelPrecoProd.setMaximumSize(new java.awt.Dimension(65, 16));
-        cadLabelPrecoProd.setMinimumSize(new java.awt.Dimension(65, 16));
-        cadLabelPrecoProd.setPreferredSize(new java.awt.Dimension(65, 16));
+        btnCadastrar.setText("Cadastrar");
+        btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CadastrarProdutosLayout = new javax.swing.GroupLayout(CadastrarProdutos);
         CadastrarProdutos.setLayout(CadastrarProdutosLayout);
@@ -99,21 +110,21 @@ public class CadProdutos extends javax.swing.JDialog {
                         .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(CadastrarProdutosLayout.createSequentialGroup()
                                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cadLabelQuantProd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cadLabelNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cadLabelIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(labelQuantProduto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cadTxtNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cadTxtQuantProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cadTxtIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtQuantProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(CadastrarProdutosLayout.createSequentialGroup()
-                                .addComponent(cadLabelPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelPrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                                .addComponent(cadTxtPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtPrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(CadastrarProdutosLayout.createSequentialGroup()
                         .addGap(164, 164, 164)
-                        .addComponent(cadBtnCadastrarProd)))
+                        .addComponent(btnCadastrar)))
                 .addContainerGap(66, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CadastrarProdutosLayout.createSequentialGroup()
                 .addGap(0, 125, Short.MAX_VALUE)
@@ -127,22 +138,22 @@ public class CadProdutos extends javax.swing.JDialog {
                 .addComponent(LabelCadProd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadLabelIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadTxtIdProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIdProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadLabelNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadTxtNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadLabelQuantProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadTxtQuantProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelQuantProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtQuantProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(CadastrarProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadLabelPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cadTxtPrecoProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelPrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(cadBtnCadastrarProd)
+                .addComponent(btnCadastrar)
                 .addGap(25, 25, 25))
         );
 
@@ -162,15 +173,62 @@ public class CadProdutos extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cadTxtIdProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadTxtIdProdActionPerformed
+    private void txtIdProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdProdutoActionPerformed
         // TODO add your handling code here:
       
         
-    }//GEN-LAST:event_cadTxtIdProdActionPerformed
+    }//GEN-LAST:event_txtIdProdutoActionPerformed
 
-    private void cadTxtNomeProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadTxtNomeProdActionPerformed
+    private void txtNomeProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeProdutoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cadTxtNomeProdActionPerformed
+    }//GEN-LAST:event_txtNomeProdutoActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        // TODO add your handling code here:
+        
+        
+        //Coletando os dados da tela
+        String NomeProduto = txtNomeProduto.getText().trim();
+        String QuantProdutoStr = txtQuantProduto.getText().trim();
+        String PrecoProdutoStr = txtPrecoProduto.getText().trim().replace(",",".");
+        
+        //Verificando se os campos estão vazios
+             if (NomeProduto.isEmpty() || QuantProdutoStr.isEmpty() || PrecoProdutoStr.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.");
+            return;
+        }
+
+        int QuantProduto = Integer.parseInt(QuantProdutoStr);
+        double PrecoProduto = Double.parseDouble(PrecoProdutoStr);
+        
+        //criando o modelo do produto
+        ProdutoModel produto = new ProdutoModel(NomeProduto, QuantProduto, PrecoProduto);
+
+          
+        ProdutoDAO dao = new ProdutoDAO();
+        boolean sucesso = false;
+        try {
+            sucesso = dao.inserirProduto(produto);
+        } catch (SQLException ex) {
+            Logger.getLogger(CadProdutos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        if (sucesso){
+            JOptionPane.showMessageDialog(this,"Produto cadastrado com sucesso!");
+            LimparCampos(); //método limpa campo
+
+        }
+        else {
+        JOptionPane.showMessageDialog(this,"Erro ao cadastrarProduto.");
+        }
+        
+        
+    }
+        private void LimparCampos() {
+        txtNomeProduto.setText("");
+        txtQuantProduto.setText("");
+        txtPrecoProduto.setText("");
+    }//GEN-LAST:event_btnCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,14 +276,14 @@ public class CadProdutos extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CadastrarProdutos;
     private javax.swing.JLabel LabelCadProd;
-    private javax.swing.JButton cadBtnCadastrarProd;
-    private javax.swing.JLabel cadLabelIdProd;
-    private javax.swing.JLabel cadLabelNomeProd;
-    private javax.swing.JLabel cadLabelPrecoProd;
-    private javax.swing.JLabel cadLabelQuantProd;
-    private javax.swing.JTextField cadTxtIdProd;
-    private javax.swing.JTextField cadTxtNomeProd;
-    private javax.swing.JTextField cadTxtPrecoProd;
-    private javax.swing.JTextField cadTxtQuantProd;
+    private javax.swing.JButton btnCadastrar;
+    private javax.swing.JLabel labelIdProduto;
+    private javax.swing.JLabel labelNomeProduto;
+    private javax.swing.JLabel labelPrecoProduto;
+    private javax.swing.JLabel labelQuantProduto;
+    private javax.swing.JTextField txtIdProduto;
+    private javax.swing.JTextField txtNomeProduto;
+    private javax.swing.JTextField txtPrecoProduto;
+    private javax.swing.JTextField txtQuantProduto;
     // End of variables declaration//GEN-END:variables
 }
