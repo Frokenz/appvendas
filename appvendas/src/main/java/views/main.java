@@ -63,6 +63,8 @@ public class main extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(800, 600));
 
+        pnlPrincipal.setBackground(new java.awt.Color(204, 204, 204));
+
         labelIdVenda.setText("Número de venda:");
 
         txtIdVenda.setEnabled(false);
@@ -103,9 +105,13 @@ public class main extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabelaBolsa.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        tabelaBolsa.setGridColor(new java.awt.Color(255, 255, 255));
+        tabelaBolsa.setInheritsPopupMenu(true);
         scrollPnl.setViewportView(tabelaBolsa);
 
         btnEnviar.setText("Enviar");
+        btnEnviar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEnviarActionPerformed(evt);
@@ -113,6 +119,7 @@ public class main extends javax.swing.JFrame {
         });
 
         btnAlterar.setText("Alterar");
+        btnAlterar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAlterar.setMaximumSize(new java.awt.Dimension(70, 30));
         btnAlterar.setMinimumSize(new java.awt.Dimension(70, 30));
         btnAlterar.setPreferredSize(new java.awt.Dimension(70, 30));
@@ -123,11 +130,13 @@ public class main extends javax.swing.JFrame {
         });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExcluir.setMaximumSize(new java.awt.Dimension(70, 30));
         btnExcluir.setMinimumSize(new java.awt.Dimension(70, 30));
         btnExcluir.setPreferredSize(new java.awt.Dimension(70, 30));
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCancelar.setMaximumSize(new java.awt.Dimension(70, 30));
         btnCancelar.setMinimumSize(new java.awt.Dimension(70, 30));
         btnCancelar.setPreferredSize(new java.awt.Dimension(70, 30));
@@ -145,6 +154,7 @@ public class main extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE)
                 .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(pnlPrincipalLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
                         .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,9 +169,10 @@ public class main extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txtIdVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlPrincipalLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
                                 .addComponent(labelComprador)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(boxItem, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -179,12 +190,13 @@ public class main extends javax.swing.JFrame {
                     .addComponent(labelIdVenda)
                     .addComponent(txtIdVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
-                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelComprador)
-                    .addComponent(boxItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SpinnerQuant, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelComprador)
+                        .addComponent(boxItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtComprador, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scrollPnl, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

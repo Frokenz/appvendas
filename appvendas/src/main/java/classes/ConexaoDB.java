@@ -7,6 +7,7 @@ package classes;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -19,6 +20,12 @@ public class ConexaoDB {
             String url ="jdbc:sqlite:src/database/db_appvendas.db"; // caminho do arquivo
             conn = DriverManager.getConnection(url);
             System.out.println("Conexão Estabelecida!");
+            
+            // ATIVA SUPORTE A CHAVE ESTRANGEIRA SQL
+            Statement stmt = conn.createStatement();
+            stmt.execute("PRAGMA foreign_keys = ON");
+            
+            
         }
         catch(SQLException e){
             System.out.println(e.getMessage());
