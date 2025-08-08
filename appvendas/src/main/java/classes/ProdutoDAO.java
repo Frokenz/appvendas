@@ -6,7 +6,10 @@ package classes;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import models.ProdutoModel;
 
 
@@ -32,5 +35,32 @@ public class ProdutoDAO {
             e.printStackTrace();
             return false;
         }
+        
     }
+    
+    public List<ProdutoModel> listarTodos(){
+        List<ProdutoModel> lista = new ArrayList<>();
+        String sql = "SELECT * FROM Produtos";
+       
+        try(Connection conn = ConexaoDB.conectar();
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery()){
+           
+            while (rs.next()){
+                ProdutoModel p = new ProdutoModel();
+                p.setIdProduto(rs.getInt("IdProduto"));
+                p.setNomeProduto(rs.getString("NomeProduto"));
+                p.setQuantProduto(rs.getInt("QuantProduto"));
+                p.setPrecoProduto(rs.getDouble("PrecoProduto"));
+                lista.add(p);
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return lista;
+    }
+    
+    
+    
+    
 }
